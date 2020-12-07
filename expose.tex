@@ -6,49 +6,55 @@
 \usepackage[ngerman]{babel}
 \usepackage{url}
 \usepackage{hyperref}
-\usepackage{lipsum}
+\usepackage{graphicx}
+
 
 \setkomafont{disposition}{\normalcolor\bfseries}
 
-% In den folgenden Zeilen {...} jeweils durch die tatsächliche personen-/exposébezogene Angaben ergänzen
-\title{
-	\{TITEL DES EXPOSÉS\}
-}
-
-\subtitle{Exposé zur 
-	Bachelorarbeit
-}
-
-\author{
-	Niklas Weimann
-	\\
-	\texttt{niklas.weimann@student.uni-siegen.de}
-	\\ \\
-	{1352285}
-}
-
 \begin{document}
 
-\maketitle
+\begin{center}
+	{\Large{Exposé zur Bachelorarbeit}} \vspace{0.5cm}
+\end{center}
+\begin{center}
+  \begin{tabular}{rl}
+    \textbf{Verfasser}: & Niklas Weimann \\
+    \textbf{Geburtsdatum}: & 02.07.1998 \\
+    \textbf{Matrikel-Nr.}: & 1352285 \\
+    \textbf{Datum}: & \today \\
+  \end{tabular}
+\end{center}
+
 
 \section{Motivation}
-Für das Verständnis von Verschlüsselungen ist es wichtig, dass bei Inhalten eine möglichst geringe intellektuelle Hürde gesetzt wird, um den Lernenden einen einfachen Einstieg in ein komplexes Themengebiet ermöglichen zu können. Dazu ist es hilfreich, wenn das weltweit eingesetzte E-Learningtool CrypTool2 möglichst viele einfache Verfahren unterstützt, um die Grundprinzipien von kryptographischen Verfahren vielfältig und anschaulich darstellen zu können. Durch die ansprechende Visualisierung kann der individuelle Lernprozess des Anwenders unterstützt werden.
+Für das Erlernen von kryptographischen Fähigkeiten ist es wichtig, dass bei den Lerninhalten eine möglichst geringe Hürde hinsichtlich der Komplexität gesetzt wird. Um Lernenden einen einfachen Einstieg in dieses komplexe Themengebiet ermöglichen zu können, wurde CrypTool2 entwickelt. CrypTool2 ist ein Computerprogramm, dass weltweit eingesetzt wird, um an Schulen, Universitäten oder in Unternehmen einen einfachen Einstieg in die Welt der Kryptographie zu bieten. Um den Prozess des Lernens bestmöglich unterstützen zu können ist es sinnvoll, dass viele Verfahren unterstützt werden, um die Grundprinzipien von kryptographischen Verfahren vielfältig und anschaulich für Lernende zugänglich zu machen. Durch die intuitive visuelle Programmierung in CrypTool2 kann der individuelle Lernprozess des Anwenders unterstützt werden. Durch die Visualisierung der Algorithmen wird eine anschauliche Lernbasis geboten.
 
-Neben dem Fokus Lernende bei ihrem Lernprozess zu unterstützten versucht CrypTool2 ebenso eine Anlaufstelle für professionelle Anwender zu bieten, die sich beispielsweise auf die Analyse von historischen Ereignissen spezialisiert haben. Nicht selten kommt es vor, dass historische Texte durch ein kryptographisches Verfahren geschützt wurden. Diese zumeist recht einfachen kryptographischen Verfahren lassen sich mittels moderner Computer und Analysetechniken jedoch leicht brechen. Hierzu ist es für diese Anwendergruppe nützlich, wenn CrypTool2 für verschiedenste klassische Verfahren eine geeignete Kryptoanalyse anbieten kann. Diese Analysetechniken können dann entweder allgemein für verschiedene kryptographische Verfahren angewendet werden oder speziell auf ein Verfahren ausgerichtet sein.
+CrypTool2 richtet sich jedoch nicht nur an die Bedürfnisse von Lernenden, sondern ist ebenso auf eine anspruchsvollere Nutzung ausgerichtet. Beispielsweise könnten historisch interessierte CrypTool2 Nutzen, um Verschlüsselte oder Codierte Texte wieder lesbar zu machen. Nicht selten kommt es vor, dass historische Texte durch ein kryptographisches Verfahren geschützt wurden, um den Inhalt des Textes beispielsweise vor Dritten zu schützen. Bei der Verschlüsselung von alten Texten kamen zumeist nur einfache Verfahren zum Einsatz. Diese Verfahren lassen sich mittels moderner Computer und kryptographischer Analyse leicht brechen. Hierzu ist es nützlich, wenn CrypTool2 für verschiedene klassische Verfahren eine geeignete Analyse bieten kann. Eine Analyse des Verfahrens lässt Schlüsse auf mögliche Schwachstellen des Verfahrens zu. Schachstellen des Verfahrens können dann verwendet werden, um die Verschlüsselung zu brechen und somit den Inhalt eines Textes zu offenbaren.
 
 \section{Problemstellung}
+CrypTool2 bietet bereits eine große Anzahl an kryptographisch relevanten Verfahren. Jedoch sind folgende Verfahren noch nicht in CrypTool2 integriert:
+\begin{itemize}
+	\item{Straddling Checkerboard}
+	\item{Ché Guevara }
+	\item{Baconian}
+	\item{T9 ("mobile phone code")}
+	\item{Josse's Code}
+	\item{Chaocipher}
+\end{itemize}
 
+Um den Umfang von CrypTool2 weiter auszubauen, sollen all diese Verfahren in CrypTool2 integriert werden. Somit wird CrypTool2 mehr zu einer zentralen Anlaufstelle, da die meisten Angebote nur einige wenige Verfahren implementieren. Obwohl es für einige der Verfahren bereits Implementierungen gibt, so fehlt jedoch meist eine visuell ansprechende Oberfläche für diese Verfahren, sodass die Funktionsweise des Verfahrens für den Nutzer leicht ersichtlich wird.
 
-
+Ebenso wichtig, wie die Darstellung eines Verfahrens ist für den Nutzer die Möglichkeit zur Analyse des Verfahrens. Dazu finden sich zumeist nur theoretische wissenschaftliche Arbeiten, jedoch keinerlei interaktive Anwendungen, die die Analyse verdeutlichen.
 
 \section{Zielsetzung}
-In dieser Arbeit sollen verschiedene klassische Verschlüsselungsverfahren als Plugins für das E-Learning Tool CrypTool2 entwickelt werden. Zusätzlich zur Ver-/ und Entschlüsselung soll ebenso für alle Verfahren eine geeignete Krytographischeanalyse implementiert werden, soweit dies noch nicht durch bereits vorhandene Komponenten mit CrypTool2 möglich ist. 
+Die Zielsetzung besteht aus drei Bereichen. Erstens sollen verschiedene klassische Verschlüsselungsverfahren als Plugins für das E-Learning Tool CrypTool2 entwickelt werden. Für jedes Verfahren soll dazu eine Komponente zur Ver-/ und Entschlüsselung entwickelt werden. Zweitens sollen alle Verfahren hinsichtlich ihrer Sicherheit hin untersucht werden. Drittens soll für jedes Verfahren eine geeignete kryptographische Analyse  (soweit dies noch nicht durch bereits vorhandene Komponenten mit CrypTool2 möglich ist). Um einen besseren Lernprozess zu unterstützen sollen das T9-Verfahren, sowie das Straddling-Board-Verfahren zusätzlich mit einer Visualisierung implementiert werden. Konkret bedeutet dies, dass die Eingabe für T9 durch eine Handytastatur visualisiert wird und die Straddling-Board-Verfahren durch ein virtuelles Straddling-Board.
 
 \section{Vorgehensweise}
-Zunächst sollen in dieser Arbeit die einzelnen Verfahren genauer erklärt werden, sowie ihre Angreifbarkeit hinsichtlich cryptographischer Analyse dargestellt werden. Basierend auf diesen Erkenntnissen werden Komponenten für das E-Learningtool CrypTool2 entwickelt, die sowohl die Ver-, als auch Entschlüsselung der entsprechenden Verfahren unterstützen.\citation{Erl2005}
+Zunächst sollen in dieser Arbeit Grundlagen der Kryptographie, sowie die einzelnen Verfahren genauer erklärt werden. Bei der Erläuterung der Verfahren soll ein besonderer Fokus auf die Stärke, sowie ihre Angreifbarkeit mittels kryptographischer Analyse gelegt werden. Basierend auf diesen Erkenntnissen werden dann Plugins für das E-Learningtool CrypTool2 entwickelt, die sowohl die Ver-, als auch die Entschlüsselung der entsprechenden Verfahren unterstützen. Ebenfalls sollen die Analysen, die auf das die Verfahren im ersten Teil angewendet wurden als Plugins für CrypTool2 implementiert werden. 
 
 \pagebreak
 
-\bibliographystyle{alphadin}
+\bibliographystyle{unsrt}
+\nocite{*}
 \bibliography{literature}
 \end{document}
