@@ -7,24 +7,46 @@
 \usepackage{url}
 \usepackage{hyperref}
 \usepackage{graphicx}
+\usepackage{enumitem}
+
 
 
 \setkomafont{disposition}{\normalcolor\bfseries}
 
 \begin{document}
+\thispagestyle{empty}
 
 \begin{center}
-	{\Large{Exposé zur Bachelorarbeit}} \vspace{0.5cm}
-\end{center}
-\begin{center}
-  \begin{tabular}{rl}
-    \textbf{Verfasser}: & Niklas Weimann \\
-    \textbf{Geburtsdatum}: & 02.07.1998 \\
-    \textbf{Matrikel-Nr.}: & 1352285 \\
-    \textbf{Datum}: & \today \\
-  \end{tabular}
+\Large{Universität Siegen}\\
 \end{center}
 
+\begin{figure}[t]
+ \centering
+ \includegraphics[width=0.6\textwidth]{images/uni-siegen.jpg}
+\end{figure}
+
+\vspace{2.5cm}
+\begin{center}
+\textbf{\LARGE{Exposé für eine Bachelorarbeit}}\\
+\Large{über das Themengebiet}\\
+\textbf{\LARGE{Codes und klassische Verschlüsselungsverfahren}}\\
+\end{center}
+\vspace{6cm}
+\begin{flushleft}
+\begin{tabular}{llll}
+\textbf{Betreuer:} & & Prof. Bernhard Esslinger  & \\
+\textbf{Student:} & & Niklas Weimann & \\
+& & niklas.weimann@student.uni-siegen.de & \\
+& & MatNr. 1352285 & \\
+& & \\
+\textbf{Version vom:} & & \today &\\
+& & \\
+\end{tabular}
+\end{flushleft}
+\newpage
+
+\tableofcontents
+\newpage
 
 \section{Motivation}
 Für das Erlernen von kryptographischen Fähigkeiten ist es wichtig, dass bei den Lerninhalten eine möglichst geringe Hürde hinsichtlich der Komplexität gesetzt wird. Um Lernenden einen einfachen Einstieg in dieses komplexe Themengebiet ermöglichen zu können, wurde CrypTool2 entwickelt. CrypTool2 ist ein Computerprogramm, dass weltweit eingesetzt wird, um an Schulen, Universitäten oder in Unternehmen einen einfachen Einstieg in die Welt der Kryptographie zu bieten. Um den Prozess des Lernens bestmöglich unterstützen zu können ist es sinnvoll, dass viele Verfahren unterstützt werden, um die Grundprinzipien von kryptographischen Verfahren vielfältig und anschaulich für Lernende zugänglich zu machen. Durch die intuitive visuelle Programmierung in CrypTool2 kann der individuelle Lernprozess des Anwenders unterstützt werden. Durch die Visualisierung der Algorithmen wird eine anschauliche Lernbasis geboten.
@@ -34,27 +56,95 @@ CrypTool2 richtet sich jedoch nicht nur an die Bedürfnisse von Lernenden, sonde
 \section{Problemstellung}
 CrypTool2 bietet bereits eine große Anzahl an kryptographisch relevanten Verfahren. Jedoch sind folgende Verfahren noch nicht in CrypTool2 integriert:
 \begin{itemize}
-	\item{Straddling Checkerboard} \cite{kahn1996codebreakers} \cite{Rijmenants2011THECG} \cite{Kuhlemann2020SpionageChiffreStraddlingCheckerboard} \cite{Goebel2020TheRiseOfFieldCiphers}
-	\item{Ché Guevara } \cite{Kuhlemann2020CheGuevaraChiffre}
-	\item{Baconian} \cite{Goldman2017WilliamFriedmanGeneticistTurnedCryptographer}
-	\item{T9 ("mobile phone code")} \cite{groverKingKushler1998ReducedKeyboardDisambiguatingComputer}
-	\item{Josse's Code} \cite{GeraudStewart2020AFrenchCipherFromTheLate19thCentury}
-	\item{Chaocipher} \cite{Rubin2011JohnFByrnesChaocipherRevealed} \cite{scheffler2010Chaocipher} \cite{Rubin2020TheChaocipherClearingHouse} \cite{Hill2009CHAOCIPHERANALYSISANDMODELS} \cite{Cowan2010CHAOCIPHERSOLVINGEXHIBITS1and4} \cite{Rubin2010CHAOCIPHERREVEALEDTHEALGORITHM}
+	\item{Straddling Checkerboard} 
+	\item{Ché Guevara}
+	\item{Baconian} 
+	\item{T9 ("mobile phone code")}
+	\item{Josse's Code}
+	\item{Chaocipher} 
 \end{itemize}
 
 Um den Umfang von CrypTool2 weiter auszubauen, sollen all diese Verfahren in CrypTool2 integriert werden. Somit wird CrypTool2 mehr zu einer zentralen Anlaufstelle, da die meisten Angebote nur einige wenige Verfahren implementieren. Obwohl es für einige der Verfahren bereits Implementierungen gibt, so fehlt jedoch meist eine visuell ansprechende Oberfläche für diese Verfahren, sodass die Funktionsweise des Verfahrens für den Nutzer leicht ersichtlich wird.
 
 Ebenso wichtig, wie die Darstellung eines Verfahrens ist für den Nutzer die Möglichkeit zur Analyse des Verfahrens. Dazu finden sich zumeist nur theoretische wissenschaftliche Arbeiten, jedoch keinerlei interaktive Anwendungen, die die Analyse verdeutlichen.
 
+\section{Erklärung der Verfahren und aktueller wissenschaftlicher Stand}
+\subsection{Straddling Checkerboard}
+Die Straddling Checkerboard Chiffre ist ein Verfahren, das auf einer 3x10-Matrix beruht. Bei dem Verfahren wird eine Substitution von einem Zeichen in eine ein- oder zweistellige Zahl durchgeführt. Das Verfahren wird genauer unter \cite{Kuhlemann2020SpionageChiffreStraddlingCheckerboard} und \cite{Goebel2020TheRiseOfFieldCiphers} beschrieben. Mittels statistischer Verfahren kann die Checkerboard Chiffre gebrochen werdern. \cite{Lyons2012CryptanalysisOfTheSimpleSubstitutionCipher}
+\subsection{Ché Guevara}
+Ché Guevara verwendete die Straddling Checkerboard Chiffre, um mit Fidel Castro zu kommunizieren. Dazu verwendete er das Verfahren immer mit dem selben Schlüssel. \cite{Kuhlemann2020CheGuevaraChiffre}
+\subsection{Baconian}
+Dieses Verfahren bildet einzelne Zeichen auf ein binäres Zeichensystem ab. So wird beispielsweise ein A zu aaaaa und ein B zu aaaab. Die Geschichte hinter dem Verfahren, sowie eine Erklärung der Funktionsweise wird in einem Paper beschrieben, das im Journal \textit{Genetics} veröffentlicht wurde.
+\cite{Goldman2017WilliamFriedmanGeneticistTurnedCryptographer}
+\subsection{T9 ("mobile phone code")}
+T9 ist ein Eingabe Verfahren, das Verwendet wurde, um auf Geräten mit nur 12 Tasten vollständige Wörter schreiben zu können. Dieses Verfahren kann jedoch auch als Verschlüsselung verwendet werden, indem die Zahlen auf den Tasten, die für ein bestimmtes Wort gedrückt wurden, als Ciphertext verwendet werden. Eine wissenschaftliche Ausarbeitung über die kryptographischen Eigenschaften, sowie über die Funktionsweise existieren nicht. Es gibt jedoch Websiten, die eine Anwendung des Verfahrens verdeutlichen. \cite{unknown2020T9TextMessage} Die genaue Funktionsweise des Verfahrens wird im Patent zu diesem System erklärt. \cite{groverKingKushler1998ReducedKeyboardDisambiguatingComputer}
+\subsection{Josse's Code}
+Josse's Code ist ein Verfahren, das in Frankreich von H. D. Josse entwickelt wurde. Das Verfahren wurde jedoch erst jüngst wissenschaftlich untersucht und beschrieben, da die Unterlagen von Josse lange Zeit in verschiedenen Militärarchiven gelagert wurden. Die einzige bislang existierende Wissenschaftliche Arbeit zu diesem Verfahren wurde von Rémi Géraud-Stewart and David Naccache verfasst. \cite{GeraudStewart2020AFrenchCipherFromTheLate19thCentury}
+\subsection{Chaocipher}
+Die Chaocipher ist ein Verfahren, dass 1918 von John Francis Byrne entwickelt wurde. Das Verfahren war lange Zeit geheim, da Byrnes Familie erst 2010 Byrnes Unterlagen veröffentlichte. Byrnes hat 4 Aufgaben in einem Buch veröffentlicht, die er als Exponate bezeichnete, wovon die Exponate 2 und 3 bislang noch nicht gebrochen wurden.\cite{Cowan2010CHAOCIPHERSOLVINGEXHIBITS1and4} \cite{scheffler2010Chaocipher} Über das Verfahren gibt es einige wissenschaftliche Arbeiten. \cite{Rubin2011JohnFByrnesChaocipherRevealed} \cite{Hill2009CHAOCIPHERANALYSISANDMODELS}
+ \cite{Rubin2010CHAOCIPHERREVEALEDTHEALGORITHM}
+Sowie eine Website, in der die Geschichte des Verfahrens detailliert zusammengefasst wird.
+ \cite{Rubin2020TheChaocipherClearingHouse}   
 \section{Zielsetzung}
-Die Zielsetzung besteht aus drei Bereichen. Erstens sollen verschiedene klassische Verschlüsselungsverfahren als Plugins für das E-Learning Tool CrypTool2 entwickelt werden. Für jedes Verfahren soll dazu eine Komponente zur Ver-/ und Entschlüsselung entwickelt werden. Zweitens sollen alle Verfahren hinsichtlich ihrer Sicherheit hin untersucht werden. Drittens soll für jedes Verfahren eine geeignete kryptographische Analyse  (soweit dies noch nicht durch bereits vorhandene Komponenten mit CrypTool2 möglich ist). Um einen besseren Lernprozess zu unterstützen sollen das T9-Verfahren, sowie das Straddling-Board-Verfahren zusätzlich mit einer Visualisierung implementiert werden. Konkret bedeutet dies, dass die Eingabe für T9 durch eine Handytastatur visualisiert wird und die Straddling-Board-Verfahren durch ein virtuelles Straddling-Board.
+Die Zielsetzung besteht aus drei Bereichen. Erstens sollen verschiedene klassische Verfahren als Plugins für das E-Learning Tool CrypTool2 entwickelt werden. Für jedes Verfahren wird dazu eine Komponente zur Ver-/ und Entschlüsselung entwickelt. Zweitens soll für jedes Verfahren eine geeignete kryptographische Analyse  (soweit dies noch nicht durch bereits vorhandene Komponenten mit CrypTool2 möglich ist). Um einen besseren Lernprozess zu unterstützen sollen das T9-Verfahren, sowie das Straddling-Board-Verfahren zusätzlich mit einer Visualisierung implementiert werden. Konkret bedeutet dies, dass die Eingabe für T9 durch eine Handytastatur visualisiert wird und die Straddling-Board-Verfahren durch ein virtuelles Straddling-Board. Drittens sollen alle Verfahren hinsichtlich ihrer Sicherheit hin untersucht werden.\\
+\linebreak
+\textbf{Ziele der Arbeit:}
+\begin{itemize}
+	\item{Genannte Verfahren als Plugins für CrypTool2 entwickeln}
+	\item{Plugins für kryptographische Analyse der Verfahren entwickeln}
+	\item{Sicherheit der Verfahren bewerten}	
+\end{itemize}
 
 \section{Vorgehensweise}
 Zunächst sollen in dieser Arbeit Grundlagen der Kryptographie, sowie die einzelnen Verfahren genauer erklärt werden. Bei der Erläuterung der Verfahren soll ein besonderer Fokus auf die Stärke, sowie ihre Angreifbarkeit mittels kryptographischer Analyse gelegt werden. Basierend auf diesen Erkenntnissen werden dann Plugins für das E-Learningtool CrypTool2 entwickelt, die sowohl die Ver-, als auch die Entschlüsselung der entsprechenden Verfahren unterstützen. Ebenfalls sollen die Analysen, die auf das die Verfahren im ersten Teil angewendet wurden als Plugins für CrypTool2 implementiert werden. 
 
-\pagebreak
+\newpage
+\section{Vorläufige Gliederung}
+\begin{enumerate}
+	\item{Einleitung}
+		\begin{enumerate}[label={\arabic*.}]
+		\item{Motivation}
+		\item{Aufgabenstellung}
+		\item{Ziele}
+		\item{Aufbau der Arbeit}
+		\end{enumerate}
+	\item{Grundlagen}
+		\begin{enumerate}[label={\arabic*.}]
+			\item{Kryptografie}
+				\begin{enumerate}[label={\arabic*.}]
+					\item{Substitution}
+					\item{Transposition}
+				\end{enumerate}
+			\item{Kryptoanalyse}
+				\begin{enumerate}[label={\arabic*.}]
+					\item{Brute-Force Angriff}
+					\item{Ciphertext-Only Angriff}
+					\item{Known-Plaintext Angriff}
+					\item{Chosen-Plaintext Angriff}
+				\end{enumerate}
+			\item{Kerckhoff Prinzip}
+		\end{enumerate}
+	\item{Funktionsweise der Verfahren}
+		\begin{enumerate}[label={\arabic*.}]
+			\item{T9}
+			\item{Straddling Checkerboard}
+			\item{Ché Guevara}
+			\item{Baconian}
+			\item{Josse's Code}
+			\item{Chaocipher}
+		\end{enumerate}
+	\item{Analyse der Verfahren}
+	\item{Design und Implementierung der Verfahren als Komponenten}
+	\item{Zusammenfassung}
+	\item{Ausblick}
+\end{enumerate}
+
+\newpage
 
 \bibliographystyle{alpha}
 \nocite{*}
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{section}{Literatur}
 \bibliography{literature}
 \end{document}
